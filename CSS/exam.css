@@ -1,19 +1,10 @@
-html,
-body {
-    overflow: hidden;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    background: #000;
-}
-
 canvas {
-    position: absolute;
+    position: fixed;
+    top: 0;
     width: 100%;
     height: 100%;
-    background: #000;
     cursor: pointer;
+    z-index: 0;
 }
 
 .test {
@@ -21,26 +12,25 @@ canvas {
     min-height: 80vh;
     max-width: 200vh;
     background-color: transparent;
-    position: fixed;
-    top: 7vh;
-    left: 0;
-    right: 0;
     margin: auto;
-    margin-bottom: 13vh;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border-radius: 0.75vh;
     z-index: 2;
+    position: absolute;
+    margin-top: 3vh;
+    /* opacity: 0; */
 }
 
 .pass-wrap {
-    position: fixed;
+    position: relative;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    z-index: 10;
+    height: 100vh;
+    z-index: 1;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +39,6 @@ canvas {
 .pass-wrap i {
     font-size: 3vh !important;
     color: #fff;
-    z-index: 10;
     position: absolute;
     margin-top: -14vh;
     background: rgba(255, 255, 255, 0.1);
@@ -80,4 +69,8 @@ canvas {
 .pass-wrap #pass:focus {
     outline: none;
     border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.foot-wrap {
+    margin-top: 104vh;
 }

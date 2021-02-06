@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="CSS/fonts/fa/css/all.min.css">
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="JS/main.js?v=105"></script>
     <link rel="icon" href="Pics/favicon.png">
     <script>
         if (/(android|bb\d+|meego).+mobile|avantgo|bada\/|blackberry|blazer|compal|elaine|fennec|hiptop|iemobile|ip(hone|od)|iris|Silk|lge|maemo|midp|mmp|netfront|opera m(ob|in)i|palm( os)?|phone|p(ixi|re)\/|plucker|pocket|psp|series(4|6)0|symbian|treo|up\.(browser|link)|vodafone|wap|windows (ce|phone)|xda|xiino/i
@@ -22,39 +23,57 @@
 </head>
 
 <body>
-    <!-- <nav class="navbar fixed-top navbar-expand-xl">
+    <nav>
         <div class="left">
             <div>
-                <a href="index.html"><span class="active">Home</span></a>
+                <a href="index.html"><span>Home</span></a>
                 <a href="index.html#sponsors"><span>Sponsors</span></a>
                 <a href="index.html#about"><span>About</span></a>
             </div>
         </div>
-        <a href="index.html"><img src="Pics/logo.png"></a>
+        <a href="index.html"><img src="Pics/favicon.png"></a>
         <div class="right">
             <div>
                 <a href="resources.html"><span>Resources</span></a>
-                <a href="exam.html"><span>Exam</span></a>
+                <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSd35P-kF5J8Ui3cnd-cQmYOfkZtnoQ5nwFIUsqq0VD8VfpThQ/viewform"><span>Register</span></a>
+                <a href="exam.html"><span class="active">Exam</span></a>
             </div>
         </div>
-    </nav> -->
 
-    <!-- <div class="test">
-
-    </div> -->
+        <div class="navbar-toggler" expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <div class="collapse">
+            <div class="navbar-nav">
+                <a href="index.html"><span>Home</span></a>
+                <a href="index.html#sponsors"><span>Sponsors</span></a>
+                <a href="index.html#about"><span>About</span></a>
+                <a href="resources.html"><span>Resources</span></a>
+                <a
+                    href="https://docs.google.com/forms/d/e/1FAIpQLSd35P-kF5J8Ui3cnd-cQmYOfkZtnoQ5nwFIUsqq0VD8VfpThQ/viewform"><span>Register</span></a>
+                <a href="exam.html"><span class="active">Exam</span></a>
+            </div>
+        </div>
+    </nav>
 
     <div class="pass-wrap">
+        <!-- <div class="test">
+        </div> -->
         <i class="fal fa-lock"></i>
         <input type="password" id="pass" name="password" minlength="8" placeholder="Password" required>
     </div>
-    
+
+
     <div class="foot-wrap">
     </div>
 
 </body>
 
 <script src="JS/custom/scroll.js"></script>
-
 <script src="JS/exam.js?v=1"></script>
 
 </html>
