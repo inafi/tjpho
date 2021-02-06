@@ -123,7 +123,7 @@
         depth: false,
     });
     perlin.init();
-    const nParticles = 6000;
+    const nParticles = 5000;
     const velocities = new Float32Array(nParticles * 2);
     const particles = new Float32Array(nParticles * 2);
     let frame = 0;
@@ -132,10 +132,13 @@
         particles[p + 0] = Math.random() * canvas.width;
         particles[p + 1] = Math.random() * canvas.height;
     }
+
+    var inc = 100;
+
     const run = () => {
         setTimeout(() => {
             requestAnimationFrame(run);
-        }, 100);
+        }, inc);
         frame++;
         gl.clear(gl.COLOR_BUFFER_BIT);
         ctx.globalCompositeOperation = "source-over";
@@ -147,8 +150,8 @@
             let n = 80 * perlin.noise2d(particles[p + 0] * 0.001, particles[p + 1] * 0.001);
             velocities[p + 0] += 0.07 * Math.cos(n);
             velocities[p + 1] += 0.07 * Math.sin(n);
-            particles[p + 0] += (velocities[p + 0] *= 0.99);
-            particles[p + 1] += (velocities[p + 1] *= 0.99);
+            particles[p + 0] += (velocities[p + 0] *= 0.985);
+            particles[p + 1] += (velocities[p + 1] *= 0.985);
             particles[p + 0] = (canvas.width + particles[p + 0]) % canvas.width;
             particles[p + 1] = (canvas.height + particles[p + 1]) % canvas.height;
         }
@@ -164,5 +167,9 @@
 
     setInterval(() => {
         perlin.reset()
-    }, 30000);
+        inc = 30;
+        setTimeout(() => {
+            inc = 100;
+        }, 6000);
+    }, 40000);
 }

@@ -47,8 +47,16 @@ canvas {
 }
 
 .pass-wrap i {
-    font-size: 5vh;
+    font-size: 3vh !important;
     color: #fff;
+    z-index: 10;
+    position: absolute;
+    margin-top: -14vh;
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(7px);
+    padding:  1.2vh 1.5vh;
+    border-radius: 3vh;
 }
 
 .pass-wrap #pass {
@@ -56,17 +64,17 @@ canvas {
     border: 0;
     border-radius: 0.25vh;
     height: 3.5vh;
-    font-size: 1.8vh;
+    font-size: 1.7vh;
     padding: .15vh 1.5vh;
     transition: 0.3s;
     color: #fff;
-    background-color: rgba(255, 255, 255, 0.1);
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(7px);
+    backdrop-filter: blur(7px);
 }
 
 ::-webkit-input-placeholder {
-    color: #fff;
+    color: (255, 255, 255, 0);
 }
 
 .pass-wrap #pass:focus {
