@@ -1,5 +1,4 @@
 "use strict"; {
-    // http://mrl.nyu.edu/~perlin/noise/
     const perlin = {
         init() {
             this.p = new Uint8Array(512);
@@ -45,7 +44,6 @@
             );
         }
     };
-    /////////////////////////////////////////////////////////////////
     const canvas = {
         init() {
             this.elem = document.createElement("canvas");
@@ -55,7 +53,6 @@
             return this.elem.getContext("2d");
         }
     };
-    /////////////////////////////////////////////////////////////////
     const webgl = {
         init(canvas, options) {
             this.elem = document.createElement("canvas");
@@ -118,7 +115,6 @@
             this.gl.drawArrays(this.gl.GL_POINTS, 0, num);
         }
     };
-    /////////////////////////////////////////////////////////////////
     const ctx = canvas.init();
     const gl = webgl.init(canvas, {
         alpha: false,
@@ -127,7 +123,7 @@
         depth: false,
     });
     perlin.init();
-    const nParticles = 10000;
+    const nParticles = 6000;
     const velocities = new Float32Array(nParticles * 2);
     const particles = new Float32Array(nParticles * 2);
     let frame = 0;
@@ -136,29 +132,32 @@
         particles[p + 0] = Math.random() * canvas.width;
         particles[p + 1] = Math.random() * canvas.height;
     }
-    /////////////////////////////////////////////////////////////////
     const run = () => {
-        requestAnimationFrame(run);
+        setTimeout(() => {
+            requestAnimationFrame(run);
+        }, 100);
         frame++;
         gl.clear(gl.COLOR_BUFFER_BIT);
         ctx.globalCompositeOperation = "source-over";
-        ctx.fillStyle = "rgba(0, 0, 0, 0.025)";
+        ctx.fillStyle = "rgba(0, 0, 0, 0.08)";
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         ctx.globalCompositeOperation = "lighter";
         for (let i = 0; i < nParticles; i++) {
             const p = i * 2;
             let n = 80 * perlin.noise2d(particles[p + 0] * 0.001, particles[p + 1] * 0.001);
-            velocities[p + 0] += 0.1 * Math.cos(n);
-            velocities[p + 1] += 0.1 * Math.sin(n);
+            velocities[p + 0] += 0.07 * Math.cos(n);
+            velocities[p + 1] += 0.07 * Math.sin(n);
             particles[p + 0] += (velocities[p + 0] *= 0.99);
             particles[p + 1] += (velocities[p + 1] *= 0.99);
             particles[p + 0] = (canvas.width + particles[p + 0]) % canvas.width;
             particles[p + 1] = (canvas.height + particles[p + 1]) % canvas.height;
         }
         webgl.drawBuffer(particles, nParticles);
-        if (frame > 30) ctx.drawImage(webgl.elem, 0, 0);
+        if (frame > 10) ctx.drawImage(webgl.elem, 0, 0);
     };
+
     requestAnimationFrame(run);
+
     /////////////////////////////////////////////////////////////////
     ["click", "touchdown"].forEach(event => {
         document.addEventListener(event, e => perlin.reset(), false);
