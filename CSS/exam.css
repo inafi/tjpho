@@ -1,15 +1,75 @@
-html, body {
-	overflow: hidden;
-	margin: 0;
-	padding: 0;
-	width: 100%;
-	height: 100%;
-	background:#000;
-} 
+html,
+body {
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+}
+
 canvas {
-	position: absolute;
-	width: 100%;
-	height: 100%;
-	background:#000;
-	cursor: pointer;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    cursor: pointer;
+}
+
+.test {
+    width: 60%;
+    min-height: 80vh;
+    max-width: 200vh;
+    background-color: transparent;
+    position: fixed;
+    top: 7vh;
+    left: 0;
+    right: 0;
+    margin: auto;
+    margin-bottom: 13vh;
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+    border-radius: 0.75vh;
+    z-index: 2;
+}
+
+.pass-wrap {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pass-wrap i {
+    font-size: 5vh;
+    color: #fff;
+}
+
+.pass-wrap #pass {
+    width: 25vh;
+    border: 0;
+    border-radius: 0.25vh;
+    height: 3.5vh;
+    font-size: 1.8vh;
+    padding: .15vh 1.5vh;
+    transition: 0.3s;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(8px);
+    backdrop-filter: blur(8px);
+}
+
+::-webkit-input-placeholder {
+    color: #fff;
+}
+
+.pass-wrap #pass:focus {
+    outline: none;
+    border: 2px solid rgba(255, 255, 255, 0.2);
 }

@@ -153,13 +153,16 @@
             particles[p + 1] = (canvas.height + particles[p + 1]) % canvas.height;
         }
         webgl.drawBuffer(particles, nParticles);
-        if (frame > 10) ctx.drawImage(webgl.elem, 0, 0);
+        if (frame > 5) ctx.drawImage(webgl.elem, 0, 0);
     };
 
     requestAnimationFrame(run);
 
-    /////////////////////////////////////////////////////////////////
-    ["click", "touchdown"].forEach(event => {
-        document.addEventListener(event, e => perlin.reset(), false);
-    });
+    // ["click", "touchdown"].forEach(event => {
+    //     document.addEventListener(event, e => perlin.reset(), false);
+    // });
+
+    setInterval(() => {
+        perlin.reset()
+    }, 30000);
 }
