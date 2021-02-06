@@ -150,8 +150,8 @@
             let n = 80 * perlin.noise2d(particles[p + 0] * 0.001, particles[p + 1] * 0.001);
             velocities[p + 0] += 0.07 * Math.cos(n);
             velocities[p + 1] += 0.07 * Math.sin(n);
-            particles[p + 0] += (velocities[p + 0] *= 0.985);
-            particles[p + 1] += (velocities[p + 1] *= 0.985);
+            particles[p + 0] += (velocities[p + 0] *= 0.99);
+            particles[p + 1] += (velocities[p + 1] *= 0.99);
             particles[p + 0] = (canvas.width + particles[p + 0]) % canvas.width;
             particles[p + 1] = (canvas.height + particles[p + 1]) % canvas.height;
         }
@@ -170,6 +170,6 @@
         inc = 30;
         setTimeout(() => {
             inc = 100;
-        }, 6000);
+        }, 7000);
     }, 40000);
 }
