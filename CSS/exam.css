@@ -91,6 +91,7 @@ canvas {
 
 ::-webkit-input-placeholder {
     color: (255, 255, 255, 0);
+    font-family: "Lato";
 }
 
 .pass-wrap #pass:focus {

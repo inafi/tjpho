@@ -5,6 +5,16 @@ function initialize() {
         isMobile = true;
     }
 
+    $('a[href^="#"]').on('click', function (event) {
+        event.preventDefault();
+        var target_offset = $(this.hash).offset() ? $(this.hash).offset().top : 0;
+        //change this number to create the additional off set        
+        var customoffset = 85;
+        $('html, body').animate({
+            scrollTop: target_offset - customoffset
+        }, 500);
+    });
+
     var prev = -1;
     var curr = 0;
     var open = false;
@@ -51,6 +61,5 @@ function initialize() {
             $(".foot-wrap").append(data);
         }
     });
-
 }
 $(initialize);

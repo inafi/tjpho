@@ -173,7 +173,7 @@
         }, 7000);
     }, 40000);
 
-    if (sessionStorage.getItem("auth") == "true") {
+    if (localStorage.getItem("auth") == "true") {
         $(".pass-wrap").css("opacity", 0);
         $(".test").show();
         setTimeout(() => {
@@ -191,7 +191,7 @@
             setTimeout(() => {
                 $(".test").css("opacity", 1);
             }, 100);
-            sessionStorage.setItem("auth", "true");
+            localStorage.setItem("auth", "true");
         } else {
             $(".pass-wrap #pass").css("border", "1px solid #e63946")
         }
