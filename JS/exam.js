@@ -173,26 +173,32 @@
         }, 7000);
     }, 40000);
 
+    if (sessionStorage.getItem("auth") == "true") {
+        $(".pass-wrap").css("opacity", 0);
+        $(".test").css("opacity", 1);
+    } else {
+        $(".pass-wrap").css("opacity", 1);
+    }
+
     function checkPswd() {
-        var confirmPassword = "Meissner2021";
         var a2 = document.getElementById("pass").value;
         if (a1 == a2) {
             $(".pass-wrap").css("opacity", 0);
             $(".test").css("opacity", 1);
+            sessionStorage.setItem("auth", "true");
         } else {
             $(".pass-wrap #pass").css("border", "1px solid #e63946")
         }
     }
 
-    var atom = document.getElementById("pass");
+    var atom = $("#pass")[0];
 
     atom.onkeyup = function (e) {
-        if (e.code == "Enter") 
+        if (e.code == "Enter")
             checkPswd();
     };
 
-    // /* Prevent the form from submitting. */
-    // pswd.parentElement.onsubmit = function () {
-    //     return false;
-    // };
+    setInterval(() => {
+        console.log(sessionStorage.getItem("auth"))
+    }, 1000);
 }
