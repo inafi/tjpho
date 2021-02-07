@@ -9,27 +9,33 @@ canvas {
 
 .test {
     width: 60%;
-    min-height: 80vh;
+    max-height: 70vh;
     max-width: 200vh;
     background-color: transparent;
-    margin: auto;
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(8px);
     border-radius: 0.75vh;
-    z-index: 2;
+    z-index: 1;
     position: absolute;
-    margin-top: 3vh;
-    /* opacity: 0; */
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    margin: auto;
+    margin-top: 11vh;
+    transition: 0.3s;
 }
 
 .pass-wrap {
+    transition: 0.3s;
     position: relative;
     left: 0;
     top: 0;
     right: 0;
     bottom: 0;
     margin: auto;
-    height: 100vh;
+    height: 90.2vh;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -55,7 +61,7 @@ canvas {
     height: 3.5vh;
     font-size: 1.7vh;
     padding: .15vh 1.5vh;
-    transition: 0.3s;
+    /* transition: 0.3s; */
     color: #fff;
     background: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(7px);

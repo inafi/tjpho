@@ -172,4 +172,27 @@
             inc = 100;
         }, 7000);
     }, 40000);
+
+    function checkPswd() {
+        var confirmPassword = "Meissner2021";
+        var a2 = document.getElementById("pass").value;
+        if (a1 == a2) {
+            $(".pass-wrap").css("opacity", 0);
+            $(".test").css("opacity", 1);
+        } else {
+            $(".pass-wrap #pass").css("border", "1px solid #e63946")
+        }
+    }
+
+    var atom = document.getElementById("pass");
+
+    atom.onkeyup = function (e) {
+        if (e.code == "Enter") 
+            checkPswd();
+    };
+
+    // /* Prevent the form from submitting. */
+    // pswd.parentElement.onsubmit = function () {
+    //     return false;
+    // };
 }
