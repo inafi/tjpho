@@ -175,7 +175,10 @@
 
     if (sessionStorage.getItem("auth") == "true") {
         $(".pass-wrap").css("opacity", 0);
-        $(".test").css("opacity", 1);
+        $(".test").show();
+        setTimeout(() => {
+            $(".test").css("opacity", 1);
+        }, 100);
     } else {
         $(".pass-wrap").css("opacity", 1);
     }
@@ -184,7 +187,10 @@
         var a2 = document.getElementById("pass").value;
         if (a1 == a2) {
             $(".pass-wrap").css("opacity", 0);
-            $(".test").css("opacity", 1);
+            $(".test").show();
+            setTimeout(() => {
+                $(".test").css("opacity", 1);
+            }, 100);
             sessionStorage.setItem("auth", "true");
         } else {
             $(".pass-wrap #pass").css("border", "1px solid #e63946")
@@ -197,8 +203,4 @@
         if (e.code == "Enter")
             checkPswd();
     };
-
-    setInterval(() => {
-        console.log(sessionStorage.getItem("auth"))
-    }, 1000);
 }

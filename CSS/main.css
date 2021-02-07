@@ -4,6 +4,12 @@
     font-weight: 100;
 }
 
+@font-face {
+    font-family: "Lato";
+    src: url("fonts/Lato/lato-light-webfont.woff2") format('woff2');
+    font-weight: 100;
+}
+
 html,
 body {
     overflow-x: hidden;
@@ -34,6 +40,10 @@ body::-webkit-scrollbar-track {
 
 body::-webkit-scrollbar-thumb:hover {
     background: #2C363F;
+}
+
+div::-webkit-scrollbar {
+    width: 0;
 }
 
 a {

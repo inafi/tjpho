@@ -7,26 +7,46 @@ canvas {
     z-index: 0;
 }
 
+/*Test*/
 .test {
-    width: 60%;
-    max-height: 70vh;
-    max-width: 200vh;
-    background-color: transparent;
-    -webkit-backdrop-filter: blur(8px);
-    backdrop-filter: blur(8px);
+    width: 28%;
+    max-height: 75vh;
+    min-width: 45vh;
+    max-width: 60vh;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
     border-radius: 0.75vh;
-    z-index: 1;
+    z-index: 3;
     position: absolute;
     top: 0;
     bottom: 0;
     left: 0;
     right: 0;
+    display: none;
     opacity: 0;
     margin: auto;
-    margin-top: 11vh;
+    margin-top: 9vh;
     transition: 0.3s;
+    overflow-y: scroll;
 }
 
+.test .title {
+    text-align: center;
+    font-size: 5vh;
+    color: #fff;
+    font-family: "Lato";
+    margin-top: 3vh; 
+}
+
+.test img {
+    margin: auto;
+    border-radius: 0.5vh;
+    width: 41vh;
+    margin-top: 3vh; 
+    display: block;
+}
+
+/*Password*/
 .pass-wrap {
     transition: 0.3s;
     position: relative;
