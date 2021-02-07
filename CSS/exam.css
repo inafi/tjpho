@@ -72,5 +72,5 @@ canvas {
 }
 
 .foot-wrap {
-    margin-top: 104vh;
+    z-index: 10;
 }

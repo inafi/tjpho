@@ -161,7 +161,7 @@ nav .navbar-toggler {
     transition: .5s ease-in-out;
     cursor: pointer;
     right: 5%;
-    top: 1.4vh;
+    top: 1.2vh;
     z-index: 1;
 }
 
@@ -230,47 +230,44 @@ nav .navbar-toggler {
 }
 
 footer {
-    background-color: #2C363F;
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
     color: #fff;
     padding-top: .5vh;
     padding-bottom: .5vh;
     width: 100%;
 }
 
+footer a {
+    color: #fff;
+}
+
 footer div {
     width: 100%;
     text-align: center;
-    font-size: 1.8vh;
+    font-size: 1.5vh;
     font-family: 'Metropolis';
-    margin-top: 0.3vh;
-    margin-bottom: 0.3vh;
+    margin-top: 0.8vh;
+    margin-bottom: 0.8vh;
 }
 
 footer i {
     color: #fff;
-    font-size: 2.2vh;
+    font-size: 1.8vh;
     margin-left: 1.2vh;
     margin-right: 1.2vh;
     transition: 0.3s;
 }
 
-footer .mid>:nth-child(1) i:hover {
+footer .fa-facebook:hover {
     color: #0fa3f8;
 }
 
-footer .mid>:nth-child(2) i:hover {
-    color: #7289da;
+footer .fa-instagram:hover {
+    color: #7232bd;
 }
 
-footer .mid>:nth-child(3) i:hover {
-    color: #ca0000;
-}
-
-footer .mid>:nth-child(4) i:hover {
-    color: #2EB67D;
-}
-
-footer .mid>:nth-child(5) i:hover {
+footer .fa-envelope:hover {
     color: #ca0000;
 }
 
