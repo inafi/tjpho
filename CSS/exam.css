@@ -55,7 +55,7 @@ canvas {
     right: 0;
     bottom: 0;
     margin: auto;
-    height: 90.2vh;
+    height: 100vh;
     z-index: 1;
     display: flex;
     justify-content: center;
@@ -101,4 +101,6 @@ canvas {
 
 .foot-wrap {
     z-index: 10;
+    position: fixed;
+    bottom: 0;
 }

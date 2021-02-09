@@ -183,7 +183,7 @@
         $(".pass-wrap").css("opacity", 1);
     }
 
-    function checkPswd() {
+    function checka() {
         var a2 = document.getElementById("pass").value;
         if (a1 == a2) {
             $(".pass-wrap").css("opacity", 0);
@@ -201,6 +201,6 @@
 
     atom.onkeyup = function (e) {
         if (e.code == "Enter")
-            checkPswd();
+            checka();
     };
 }
