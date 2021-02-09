@@ -172,35 +172,4 @@
             inc = 100;
         }, 7000);
     }, 40000);
-
-    if (localStorage.getItem("auth") == "true") {
-        $(".pass-wrap").css("opacity", 0);
-        $(".test").show();
-        setTimeout(() => {
-            $(".test").css("opacity", 1);
-        }, 100);
-    } else {
-        $(".pass-wrap").css("opacity", 1);
-    }
-
-    function checka() {
-        var a2 = document.getElementById("pass").value;
-        if (a1 == a2) {
-            $(".pass-wrap").css("opacity", 0);
-            $(".test").show();
-            setTimeout(() => {
-                $(".test").css("opacity", 1);
-            }, 100);
-            localStorage.setItem("auth", "true");
-        } else {
-            $(".pass-wrap #pass").css("border", "1px solid #e63946")
-        }
-    }
-
-    var atom = $("#pass")[0];
-
-    atom.onkeyup = function (e) {
-        if (e.code == "Enter")
-            checka();
-    };
 }
