@@ -2,17 +2,40 @@ body {
     background: #fff;
 }
 
-/*faqs*/
-.faqs {
-    padding-top: 8vh;
-    padding-bottom: 5vh;
+hr {
+    margin-top: 4vh;
+    margin-bottom: 4vh;
 }
 
-.faqs .title {
+.title {
     color: #000;
     text-align: center;
     font-size: 3vh;
     font-weight: 100;
+}
+
+/*tests*/
+
+/*sponsors*/
+.sponsors {
+    margin-top: 10vh;
+}
+
+.sponsors .row {
+    justify-content: center;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.sponsors img {
+    height: 10vh;
+    margin: 3vh 3%;
+}
+
+/*faqs*/
+.faqs {
+    padding-top: 2vh;
+    padding-bottom: 5vh;
 }
 
 .faqs .row {
@@ -43,6 +66,5 @@ body {
 
 /*footer*/
 .foot-wrap {
-    margin-top: 30vh;
     background-color: #000;
 }

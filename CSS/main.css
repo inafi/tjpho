@@ -56,8 +56,12 @@ a:hover {
 }
 
 hr {
-    margin: 0;
-    border-top: 0;
+    min-width: 40vh;
+    width: 50%;
+    margin: auto;
+    height: 0.1px;
+    border: 0;
+    background-color: #ddd;
 }
 
 p {
@@ -87,7 +91,7 @@ img {
 /*Navbar*/
 nav {
     height: 4.5vh;
-    font-size: 1.5vh;
+    font-size: 1.4vh;
     width: 100%;
     position: fixed;
     top: 0;
@@ -106,12 +110,12 @@ nav .left {
     width: 50%;
     left: 0;
     top: 0;
-    line-height: 5vh;
+    line-height: 4.5vh;
 }
 
 nav .left > div {
     position: absolute;
-    right: 5vh;
+    right: 4.5vh;
 }
 
 nav .right {
@@ -119,7 +123,7 @@ nav .right {
     width: 50%;
     right: 0;
     top: 0;
-    line-height: 5vh;
+    line-height: 4.5vh;
 }
 
 nav .right > div {
@@ -132,11 +136,11 @@ nav a {
 }
 
 nav img {
-    height: 3.5vh;
+    height: 3.25vh;
     cursor: pointer;
     z-index: 3;
     transition: 0.3s;
-    top: .75vh;
+    top: .625vh;
     left: 0;
     right: 0;
     position: fixed;
