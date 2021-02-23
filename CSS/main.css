@@ -10,6 +10,10 @@
     font-weight: 100;
 }
 
+* {
+    outline: none;
+}
+
 html,
 body {
     overflow-x: hidden;
@@ -86,6 +90,7 @@ img {
     display: flex;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 /*Navbar*/
@@ -270,8 +275,8 @@ footer div {
     text-align: center;
     font-size: 1.5vh;
     font-family: 'Metropolis';
-    margin-top: 0.8vh;
-    margin-bottom: 0.8vh;
+    margin-top: 0.5vh;
+    margin-bottom: 0.5vh;
 }
 
 footer i {

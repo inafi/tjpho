@@ -5,15 +5,34 @@ function initialize() {
         isMobile = true;
     }
 
-    $('a[href^="#"]').on('click', function (event) {
-        event.preventDefault();
-        var target_offset = $(this.hash).offset() ? $(this.hash).offset().top : 0;
-        //change this number to create the additional off set        
-        var customoffset = 85;
-        $('html, body').animate({
-            scrollTop: target_offset - customoffset
-        }, 500);
-    });
+    $('a[href*="#"]')
+        .not('[href="#"]')
+        .not('[href="#0"]')
+        .click(function (event) {
+            if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') &&
+                location.hostname == this.hostname
+            ) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                if (target.length) {
+                    event.preventDefault();
+                    console.log(target.offset().top)
+                    $('html, body').animate({
+                        scrollTop: target.offset().top - $(window).height() * 0.045
+                    }, 800, function () {
+                        var $target = $(target);
+                        $target.focus();
+                        if ($target.is(":focus")) { 
+                            return false;
+                        } else {
+                            $target.attr('tabindex', '-1');
+                            $target.focus(); 
+                        };
+                    });
+                }
+            }
+        });
 
     var prev = -1;
     var curr = 0;

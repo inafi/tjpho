@@ -14,15 +14,38 @@ hr {
     font-weight: 100;
 }
 
-/*tests*/
+/*info*/
+
+/*prizes*/
+.prizes {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+}
+
+.prizes p.label {
+    font-size: 2vh;
+    width: 100%;
+    text-align: center;
+    color: #1B98E0;
+    margin-top: 2vh;
+    margin-bottom: 1vh;
+}
+
+.prizes p.desc {
+    font-size: 1.8vh;
+    width: 28%;
+    min-width: 45vh;
+    text-align: center;
+    margin-bottom: 1vh;
+    line-height: 3vh;
+}
 
 /*sponsors*/
 .sponsors {
-    margin-top: 10vh;
+    padding-top: 2vh;
 }
 
 .sponsors .row {
-    justify-content: center;
     padding-left: 15%;
     padding-right: 15%;
 }
@@ -39,7 +62,6 @@ hr {
 }
 
 .faqs .row {
-    justify-content: center;
     padding-left: 10%;
     padding-right: 10%;
 }
@@ -62,6 +84,7 @@ hr {
 .faqs .desc {
     margin-top: 0.75vh;
     font-size: 1.6vh;
+    line-height: 2.2vh;
 }
 
 /*footer*/
