@@ -38,7 +38,7 @@ function initialize() {
     }, 50)
 
     //Mobile Menu
-    $("nav .navbar-toggler").on("click", function (e) {
+    $("nav .navbartoggler").on("click", function (e) {
         $(this).toggleClass('open');
         if ($(this).attr("expanded") == "true") {
             $(".navbar-nav").css("opacity", "0");
