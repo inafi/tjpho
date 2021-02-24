@@ -26,17 +26,18 @@ hr {
 
 /*info*/
 .info {
-    padding-top: 6vh;
-    padding-bottom: 2vh;
+    padding: 6vh 7% 2vh;
 }
 
 .info .row > div {
     width: 30%;
-    margin: 0vh 1% 2vh 1%;
+    margin: 0vh 2% 2vh 2%;
+    min-width: 50vh;
 }
 
 .info .row > div.long {
-    width: 62%;
+    width: 64%;
+    min-width: 50vh;
 }
 
 .info p.label {
