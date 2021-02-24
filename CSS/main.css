@@ -52,7 +52,7 @@ div::-webkit-scrollbar {
 
 a {
     text-decoration: none !important;
-    transition: 0.3s;
+    transition: color 0.3s;
 }
 
 a:hover {
@@ -107,7 +107,7 @@ nav {
     z-index: 2;
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
-    transition: 0.3s;
+    transition: background 0.3s;
 }
 
 nav .left {
