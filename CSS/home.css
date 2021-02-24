@@ -37,7 +37,7 @@ canvas {
 
 .landing p.label {
     color: #fff;
-    font-size: 6vh;
+    font-size: 7vh;
     text-align: center;
     font-family: "Lato";
 }
@@ -54,7 +54,7 @@ canvas {
 
 /*info*/
 .info {
-    padding: 6vh 7% 2vh;
+    padding: 6vh 7% 4vh;
     background: #fff;
 }
 
@@ -90,7 +90,7 @@ canvas {
 .prizes {
     padding-top: 2vh;
     padding-bottom: 2vh;
-    width: 32%;
+    width: 35%;
     min-width: 50vh;
     margin: auto;
     -webkit-backdrop-filter: blur(15px);
@@ -114,7 +114,7 @@ canvas {
 
 .prizes p.desc {
     font-size: 1.8vh;
-    width: 60%;
+    width: 80%;
     min-width: 40vh;
     text-align: center;
     margin-bottom: 1vh;
