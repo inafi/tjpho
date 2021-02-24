@@ -103,15 +103,15 @@ hr {
 }
 
 .faqs .row {
-    padding-left: 8%;
-    padding-right: 8%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .faqs .row>div {
     height: auto;
-    margin: 2vh 2%;
+    margin: 3vh 2% 2vh;
     min-width: 35vh;
-    width: 25%;
+    width: 30%;
 }
 
 .faqs .label {
