@@ -17,7 +17,6 @@ function initialize() {
                 target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
                 if (target.length) {
                     event.preventDefault();
-                    console.log(target.offset().top)
                     $('html, body').animate({
                         scrollTop: target.offset().top - $(window).height() * 0.045
                     }, 800, function () {
@@ -37,20 +36,22 @@ function initialize() {
     var prev = -1;
     var curr = 0;
     var open = false;
+
     setInterval(function () {
         curr = $(window).scrollTop() + $(window).width();
         if (curr != prev || !open) {
             if ($(window).scrollTop() == 0 && !isMobile && $(window).width() > $(window).height()) {
-                $("nav").css('background-color', 'inherit');
+                $("nav").css('background-color', 'transparent');
                 $("nav").css('-webkit-backdrop-filter', 'blur(0px)');
                 $("nav").css('backdrop-filter', 'blur(0px)');
             } else {
                 $("nav").css('background-color', 'rgba(0, 0, 0, 0.20)');
                 $("nav").css('-webkit-backdrop-filter', 'blur(10px)');
                 $("nav").css('backdrop-filter', 'blur(10px)');
-            }
-            if (open) {
-                $("nav .navbar-toggler").click();
+                
+                if (open) {
+                    $("nav .navbartoggler").click();
+                }
             }
         }
         prev = curr;

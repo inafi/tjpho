@@ -174,6 +174,8 @@ nav span:hover {
 nav .collapse,
 nav .navbartoggler {
     display: none;
+    user-select: none;
+    outline:none;
 }
 
 .navbartoggler {
@@ -196,7 +198,7 @@ nav .navbartoggler {
 .navbartoggler span {
     display: block;
     position: absolute;
-    height: 0.1px;
+    height: .1vh;
     width: 100%;
     padding: 0vh;
     background: #3BB5FC;
@@ -210,6 +212,8 @@ nav .navbartoggler {
     -moz-transition: .25s ease-in-out;
     -o-transition: .25s ease-in-out;
     transition: .25s ease-in-out;
+    user-select: none;
+    outline:none;
 }
 
 .navbartoggler span:nth-child(1) {
