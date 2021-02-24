@@ -73,12 +73,12 @@ canvas {
 .info .row>div {
     width: 30%;
     margin: 0vh 2% 2vh;
-    min-width: 50vh;
+    min-width: 40vh;
 }
 
 .info .row>div.long {
     width: 64%;
-    min-width: 50vh;
+    min-width: 40vh;
 }
 
 .info p.label {
@@ -92,7 +92,6 @@ canvas {
 
 .info p.desc {
     font-size: 1.8vh;
-    min-width: 45vh;
     margin-bottom: 1vh;
     line-height: 3vh;
     width: 100%;
@@ -102,7 +101,7 @@ canvas {
 .prizes {
     padding-top: 2vh;
     padding-bottom: 2vh;
-    width: 35%;
+    width: 28%;
     min-width: 50vh;
     margin: auto;
     -webkit-backdrop-filter: blur(15px);
