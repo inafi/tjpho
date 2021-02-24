@@ -726,3 +726,7 @@
         new Field(document.body);
     }, false);
 }).call(this);
+
+$(window).bind('orientationchange', function(e) {
+    window.location.reload();
+});
