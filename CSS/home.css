@@ -75,12 +75,12 @@ canvas {
     width: 30%;
     margin: 0vh 2% 2vh;
     min-width: 40vh;
-    max-width: 75vh;
+    /* max-width: 75vh; */
 }
 
 .info .row>div.long {
     width: 64%;
-    max-width: calc(150vh + 4%);
+    /* max-width: calc(150vh + 4%); */
 }
 
 .info p.label {
@@ -144,8 +144,8 @@ canvas {
 .sponsors .row {
     padding-left: 15%;
     padding-right: 15%;
-    max-width: 150vh;
-    margin: auto;
+    /* max-width: 150vh;
+    margin: auto; */
 }
 
 .sponsors img {
