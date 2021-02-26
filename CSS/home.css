@@ -71,15 +71,18 @@ canvas {
     background: #fff;
 }
 
-.info .row>div {
+.info .short {
+}
+
+.info .row div {
     width: 30%;
-    margin: 0vh 2% 2vh;
+    margin: 0vh 3% 2vh;
     min-width: 40vh;
     /* max-width: 75vh; */
 }
 
-.info .row>div.long {
-    width: 64%;
+.info .row.long div {
+    width: 66%;
     /* max-width: calc(150vh + 4%); */
 }
 
