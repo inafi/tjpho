@@ -45,7 +45,7 @@ function initialize() {
                 $("nav").css('-webkit-backdrop-filter', 'blur(0px)');
                 $("nav").css('backdrop-filter', 'blur(0px)');
             } else {
-                $("nav").css('background-color', 'rgba(0, 0, 0, 0.30)');
+                $("nav").css('background-color', 'rgba(0, 0, 0, 0.20)');
                 $("nav").css('-webkit-backdrop-filter', 'blur(10px)');
                 $("nav").css('backdrop-filter', 'blur(10px)');
                 
