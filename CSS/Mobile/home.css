@@ -1,3 +1,7 @@
+p {
+    font-weight: normal !important;
+}
+
 @media only screen and (orientation:portrait) {
     .landing p.desc {
         width: 80%;
@@ -7,19 +11,39 @@
         font-size: 4vh;
     }
 
+    .info .title {
+        width: 100%;
+        margin-bottom: 1vh;
+    }
+
+    .info div,
+    .info div.long {
+        min-width: 40vh;
+    }
+
     .info p.label {
         font-size: 2.8vh;
     }
 
-    .info .row>div, 
-    .info .row>div.long {
-        min-width: 40vh;
-        font-size: 1.2vh;
+    .info p.desc {
+        font-size: 1.2vh !important;
     }
 
-    .info p.desc {
+    .info .long p.desc {
+        font-size: .7vh !important;
+        line-height: 1.4vh;
+    }
+
+    .faqs .row>div {
         min-width: 40vh;
-        font-size: 1.2vh;
+    }
+
+    .faqs .label {
+        font-size: 2.5vh;
+    }
+
+    .faqs .desc {
+        font-size: .8vh;
     }
 }
 
@@ -32,10 +56,9 @@
         font-size: 3.5vh;
     }
 
-    .info .row>div, 
+    .info .row>div,
     .info .row>div.long {
         min-width: 40vh;
-        font-size: 2vh;
     }
 
     .info p.desc {

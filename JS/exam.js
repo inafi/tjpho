@@ -87,7 +87,7 @@ function initialize() {
                     this.gl.shaderSource(fragmentShader, `
 				precision highp float;
 				void main() {
-					gl_FragColor = vec4(0.2, 0.3, 1.0, 1.0);
+					gl_FragColor = vec4(0.2, 0.3, .5, 1.0);
 				}`);
                     this.gl.compileShader(fragmentShader);
                     const program = this.gl.createProgram();
@@ -188,6 +188,7 @@ function initialize() {
         }
 
         $(window).on('orientationchange', function () {
+            window.location.reload()
             if (isMobile) {
                 if (Math.abs(window.orientation) != 90) {
                     $("body").css("background-image", 'url("Pics/exam/port.png")');

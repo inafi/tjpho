@@ -3,15 +3,15 @@ body {
 }
 
 .hr-wrap {
-    padding-top: 4vh;
-    padding-bottom: 4vh;
+    padding-top: calc(var(--vc) * 4);
+    padding-bottom: calc(var(--vc) * 4);
     background: #fff;
 }
 
 .title {
     color: #000;
     text-align: center;
-    font-size: 3vh;
+    font-size: calc(var(--vc) * 3);
     font-weight: 100;
     width: 80%;
     margin: auto;
@@ -21,7 +21,7 @@ body {
 canvas {
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: calc(var(--vc) * 100);
     top: 0;
     left: 0;
     z-index: -1;
@@ -29,8 +29,8 @@ canvas {
 
 /*landing*/
 .landing {
-    margin-top: -4.25vh;
-    height: 70vh;
+    margin-top: calc(var(--vc) * -4.25);
+    height: calc(var(--vc) * 70);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,44 +40,41 @@ canvas {
 
 .landing p.label {
     color: #fff;
-    font-size: 7vh;
+    font-size: calc(var(--vc) * 7);
     text-align: center;
     font-family: "Lato";
 }
 
 .landing p.desc {
     color: #fff;
-    font-size: 2vh;
+    font-size: calc(var(--vc) * 2);
     text-align: center;
-    line-height: 3vh;
-    margin-top: 2vh;
+    line-height: calc(var(--vc) * 3);
+    margin-top: calc(var(--vc) * 2);
     width: 20%;
     font-family: "Lato";
-    min-width: 35vh;
+    min-width: calc(var(--vc) * 35);
 }
 
 .landing a {
     background: #1B98E0;
-    padding: 1vh 2vh;
-    margin-top: 3vh;
-    border-radius: 0.25vh;
-    font-size: 2vh;
+    padding: calc(var(--vc) * 1) calc(var(--vc) * 2);
+    margin-top: calc(var(--vc) * 3);
+    border-radius: calc(var(--vc) * 0.25);
+    font-size: calc(var(--vc) * 2);
     color: #fff;
 }
 
 /*info*/
 .info {
-    padding: 6vh 7% 4vh;
+    padding: calc(var(--vc) * 6) 7% calc(var(--vc) * 4);
     background: #fff;
-}
-
-.info .short {
 }
 
 .info .row div {
     width: 30%;
-    margin: 0vh 3% 2vh;
-    min-width: 40vh;
+    margin: 0vh 3% calc(var(--vc) * 2);
+    min-width: calc(var(--vc) * 40);
     /* max-width: 75vh; */
 }
 
@@ -87,32 +84,32 @@ canvas {
 }
 
 .info p.label {
-    font-size: 2.2vh;
+    font-size: calc(var(--vc) * 2.2);
     width: 100%;
     text-align: center;
     color: #1B98E0;
-    margin-top: 2vh;
-    margin-bottom: 1vh;
+    margin-top: calc(var(--vc) * 2);
+    margin-bottom: calc(var(--vc) * 1);
 }
 
 .info p.desc {
-    font-size: 1.8vh;
-    margin-bottom: 1vh;
-    line-height: 3vh;
+    font-size: calc(var(--vc) * 1.8);
+    margin-bottom: calc(var(--vc) * 1);
+    line-height: calc(var(--vc) * 3);
     width: 100%;
 }
 
 /*prizes*/
 .prizes {
-    padding-top: 2vh;
-    padding-bottom: 2vh;
+    padding-top: calc(var(--vc) * 2);
+    padding-bottom: calc(var(--vc) * 2);
     width: 28%;
-    min-width: 50vh;
+    min-width: calc(var(--vc) * 50);
     margin: auto;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
-    margin: 6vh auto;
-    border-radius: 1vh;
+    margin: calc(var(--vc) * 6) auto;
+    border-radius: calc(var(--vc) * 1);
 }
 
 .prizes .title {
@@ -120,28 +117,28 @@ canvas {
 }
 
 .prizes p.label {
-    font-size: 2.2vh;
+    font-size: calc(var(--vc) * 2.2);
     width: 100%;
     text-align: center;
     color: #1B98E0;
-    margin-top: 2vh;
-    margin-bottom: 1vh;
+    margin-top: calc(var(--vc) * 2);
+    margin-bottom: calc(var(--vc) * 1);
 }
 
 .prizes p.desc {
-    font-size: 1.8vh;
+    font-size: calc(var(--vc) * 1.8);
     width: 80%;
-    min-width: 40vh;
+    min-width: calc(var(--vc) * 40);
     text-align: center;
-    margin-bottom: 1vh;
-    line-height: 3vh;
+    margin-bottom: calc(var(--vc) * 1);
+    line-height: calc(var(--vc) * 3);
     color: #fff;
 }
 
 /*sponsors*/
 .sponsors {
     background: #fff;
-    padding-top: 6vh;
+    padding-top: calc(var(--vc) * 6);
 }
 
 .sponsors .row {
@@ -152,15 +149,15 @@ canvas {
 }
 
 .sponsors img {
-    height: 10vh;
-    margin: 3vh 3%;
+    height: calc(var(--vc) * 10);
+    margin: calc(var(--vc) * 3) 3%;
 }
 
 /*faqs*/
 .faqs {
     background: #fff;
-    padding-top: 2vh;
-    padding-bottom: 4vh;
+    padding-top: calc(var(--vc) * 2);
+    padding-bottom: calc(var(--vc) * 4);
 }
 
 .faqs .row {
@@ -170,13 +167,13 @@ canvas {
 
 .faqs .row>div {
     height: auto;
-    margin: 3vh 2% 2vh;
-    min-width: 35vh;
+    margin: calc(var(--vc) * 3) 2% calc(var(--vc) * 2);
+    min-width: calc(var(--vc) * 35);
     width: 30%;
 }
 
 .faqs .label {
-    font-size: 1.9vh;
+    font-size: calc(var(--vc) * 1.9);
     display: inline-block;
     color: #1B98E0;
     font-family: 'Metropolis';
@@ -186,9 +183,9 @@ canvas {
 }
 
 .faqs .desc {
-    margin-top: 0.75vh;
-    font-size: 1.7vh;
-    line-height: 2.8vh;
+    margin-top: calc(var(--vc) * 0.75);
+    font-size: calc(var(--vc) * 1.7);
+    line-height: calc(var(--vc) * 2.8);
     /* text-align: center; */
 }
 

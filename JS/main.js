@@ -5,6 +5,7 @@ function initialize() {
         isMobile = true;
     }
 
+    //smooth scroll inpage links
     $('a[href*="#"]')
         .not('[href="#"]')
         .not('[href="#0"]')
@@ -22,20 +23,27 @@ function initialize() {
                     }, 800, function () {
                         var $target = $(target);
                         $target.focus();
-                        if ($target.is(":focus")) { 
+                        if ($target.is(":focus")) {
                             return false;
                         } else {
                             $target.attr('tabindex', '-1');
-                            $target.focus(); 
+                            $target.focus();
                         };
                     });
                 }
             }
         });
 
+    //navbar
     var prev = -1;
     var curr = 0;
     var open = false;
+
+    //css unit
+    var prevwidth = $(window).width()
+    var prevheight = $(window).height()
+    var vc = $(window).height() * 0.01
+    $(":root")[0].style.setProperty("--vc", vc + "px");
 
     setInterval(function () {
         curr = $(window).scrollTop() + $(window).width();
@@ -48,13 +56,30 @@ function initialize() {
                 $("nav").css('background-color', 'rgba(0, 0, 0, 0.20)');
                 $("nav").css('-webkit-backdrop-filter', 'blur(10px)');
                 $("nav").css('backdrop-filter', 'blur(10px)');
-                
+
                 if (open) {
                     $("nav .navbartoggler").click();
                 }
             }
         }
         prev = curr;
+
+        if ($(window).width() != prevwidth) {
+            var vc = $(window).height() * 0.01
+            $(":root")[0].style.setProperty("--vc", vc + "px");
+            prevwidth = $(window).width()
+            console.log(vc)
+        }
+
+        if ($(window).height() != prevheight) {
+            var vc = $(window).height() * 0.01
+            var currvc = parseFloat($(":root").css("--vc").split("px")[0])
+            if (vc > currvc) {
+                $(":root")[0].style.setProperty("--vc", vc + "px");
+            }
+            prevheight = $(window).height()
+        }
+
     }, 50)
 
     //Mobile Menu
@@ -62,7 +87,7 @@ function initialize() {
         $(this).toggleClass('open');
         if ($(this).attr("expanded") == "true") {
             $(".navbar-nav").css("opacity", "0");
-            $(".navbar-nav").css("transform", "translateY(calc(-100% - 10vh))");
+            $(".navbar-nav").css("transform", "translateY(calc(-100% - calc(var(--vc) * 10)))");
             $(this).attr("expanded", "false");
             open = false;
         } else {

@@ -4,11 +4,15 @@ body {
     background-size: cover;
 }
 
+body::-webkit-scrollbar {
+    width: 0px !important;
+}
+
 canvas {
     position: fixed;
     top: 0;
     width: 100%;
-    height: 100%;
+    height: calc(var(--vc) * 100);
     cursor: pointer;
     z-index: 0;
 }
@@ -16,12 +20,12 @@ canvas {
 /*Test*/
 .test {
     width: 28%;
-    max-height: 75vh;
-    min-width: 45vh;
-    max-width: 60vh;
+    max-height: calc(var(--vc) * 75);
+    min-width: calc(var(--vc) * 45);
+    max-width: calc(var(--vc) * 60);
     -webkit-backdrop-filter: blur(4px);
     backdrop-filter: blur(4px);
-    border-radius: 0.75vh;
+    border-radius: calc(var(--vc) * .75);
     z-index: 3;
     position: absolute;
     top: 0;
@@ -31,24 +35,24 @@ canvas {
     display: none;
     opacity: 0;
     margin: auto;
-    margin-top: 9vh;
+    margin-top: calc(var(--vc) * 9);
     transition: 0.3s;
     overflow-y: scroll;
 }
 
 .test .title {
     text-align: center;
-    font-size: 5vh;
+    font-size: calc(var(--vc) * 5);
     color: #fff;
     font-family: "Lato";
-    margin-top: 3vh; 
+    margin-top: calc(var(--vc) * 3); 
 }
 
 .test img {
     margin: auto;
-    border-radius: 0.5vh;
-    width: 41vh;
-    margin-top: 3vh; 
+    border-radius: calc(var(--vc) * .5);
+    width: calc(var(--vc) * 41);
+    margin-top: calc(var(--vc) * 3); 
     display: block;
 }
 
@@ -70,24 +74,24 @@ canvas {
 }
 
 .pass-wrap i {
-    font-size: 3vh !important;
+    font-size: calc(var(--vc) * 3) !important;
     color: #fff;
     position: absolute;
-    margin-top: -14vh;
+    margin-top: calc(var(--vc) * -14);
     background: rgba(255, 255, 255, 0.1);
     -webkit-backdrop-filter: blur(8px);
     backdrop-filter: blur(7px);
-    padding:  1.4vh 1.7vh;
-    border-radius: 3vh;
+    padding: calc(var(--vc) * 1.4) calc(var(--vc) * 1.7);
+    border-radius: calc(var(--vc) * 3);
 }
 
 .pass-wrap #pass {
-    width: 25vh;
+    width: calc(var(--vc) * 25);
     border: 0;
-    border-radius: 0.25vh;
-    height: 3.5vh;
-    font-size: 1.7vh;
-    padding: .15vh 1.5vh;
+    border-radius: calc(var(--vc) * .25);
+    height: calc(var(--vc) * 3.5);
+    font-size: calc(var(--vc) * 1.7);
+    padding: calc(var(--vc) * .15) calc(var(--vc) * 1.5);
     /* transition: 0.3s; */
     color: #fff;
     background: rgba(255, 255, 255, 0.1);
