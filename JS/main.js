@@ -54,8 +54,8 @@ function initialize() {
                 $("nav").css('backdrop-filter', 'blur(0px)');
             } else {
                 $("nav").css('background-color', 'rgba(0, 0, 0, 0.20)');
-                $("nav").css('-webkit-backdrop-filter', 'blur(10px)');
-                $("nav").css('backdrop-filter', 'blur(10px)');
+                $("nav").css('-webkit-backdrop-filter', 'blur(15px)');
+                $("nav").css('backdrop-filter', 'blur(15px)');
 
                 if (open) {
                     $("nav .navbartoggler").click();
