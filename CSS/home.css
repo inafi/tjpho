@@ -74,7 +74,7 @@ canvas {
 .info .row div {
     width: 30%;
     margin: 0vh 3% calc(var(--vc) * 2);
-    min-width: calc(var(--vc) * 40);
+    min-width: calc(var(--vc) * 35);
     /* max-width: 75vh; */
 }
 
@@ -132,6 +132,15 @@ canvas {
     text-align: center;
     margin-bottom: calc(var(--vc) * 1);
     line-height: calc(var(--vc) * 3);
+    color: #fff;
+}
+
+.prizes p.asterisks {
+    font-size: calc(var(--vc) * 1.3);
+    width: 80%;
+    min-width: calc(var(--vc) * 40);
+    text-align: left;
+    margin-top: calc(var(--vc) * 2);
     color: #fff;
 }
 
