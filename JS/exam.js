@@ -198,5 +198,9 @@ function initialize() {
             }
         });
     }
+
+    setInterval(() => {
+        $(".template").attr("href", "resources/2021_TJPhO_Solutions_Template.pdf")
+    }, 100);
 }
 $(initialize);
