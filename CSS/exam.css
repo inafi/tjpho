@@ -48,11 +48,18 @@ canvas {
     margin-top: calc(var(--vc) * 3); 
 }
 
+.test .desc {
+    color: #fff;
+    margin-top: calc(var(--vc) * 1); 
+    font-size: calc(var(--vc) * 2);
+    text-align: center;
+}
+
 .test img {
     margin: auto;
     border-radius: calc(var(--vc) * .5);
     width: calc(var(--vc) * 41);
-    margin-top: calc(var(--vc) * 3); 
+    margin-top: calc(var(--vc) * 2); 
     display: block;
 }
 
