@@ -55,6 +55,14 @@ canvas {
     text-align: center;
 }
 
+.test a {
+    color: #529fdb;
+}
+
+.test a:hover {
+    color: #9e1ef3;
+}
+
 .test img {
     margin: auto;
     border-radius: calc(var(--vc) * .5);
