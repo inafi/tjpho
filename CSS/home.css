@@ -103,7 +103,7 @@ canvas {
 .prizes {
     padding-top: calc(var(--vc) * 2);
     padding-bottom: calc(var(--vc) * 2);
-    width: 28%;
+    width: 35%;
     min-width: calc(var(--vc) * 50);
     margin: auto;
     -webkit-backdrop-filter: blur(15px);
