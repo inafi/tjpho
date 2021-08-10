@@ -39,7 +39,7 @@ function initialize() {
                 $("table.student").append(append);
             }
 
-            $("table.student").css("height", (arr.length - 2) * 6 + "vh");
+            $("table.student").css("height", "calc(var(--vc) * " + (arr.length - 2) * 6 + ")");
             $("td").css("width", "calc(100%/" + arr[0].values.length + ")")
         }
     });

@@ -9,22 +9,22 @@ canvas {
 }
 
 table.test {
-    height: 6vh;
-    margin: 8vh auto 0 auto;
+    height: calc(var(--vc) * 6);
+    margin: calc(var(--vc) * 8) auto 0 auto;
     width: 50%;
-    max-width: 200vh;
+    max-width: calc(var(--vc) * 200);
     empty-cells: show;
 }
 
 table.test tr {
-    font-size: 2vh;
+    font-size: calc(var(--vc) * 2);
 }
 
 table.student {
-    height: 30vh;
+    height: calc(var(--vc) * 30);
     width: 50%;
-    max-width: 200vh;
-    margin: 2vh auto 5vh auto;
+    max-width: calc(var(--vc) * 200);
+    margin: calc(var(--vc) * 2) auto calc(var(--vc) * 5) auto;
 }
 
 table.student tr {
@@ -52,7 +52,7 @@ tr.content {
     background: #7921b434;
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(35px);
-    font-size: 2vh;
+    font-size: calc(var(--vc) * 2);
     transition: 0.3s;
     color: #fff
 }
@@ -66,11 +66,11 @@ table.student tr.content:hover {
 }
 
 tr.space {
-    height: 0.5vh;
+    height: calc(var(--vc) * 0.5);
 }
 
 td {
-    min-width: 13vh;
+    min-width: calc(var(--vc) * 13);
 }
 
 .table-wrap {
