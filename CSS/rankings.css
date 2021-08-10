@@ -32,7 +32,7 @@ table.student tr {
 }
 
 table.student tr:nth-child(1) {
-    background-color: #e9af00;
+    background-color: #dfa700;
 }
 
 table.student tr:nth-child(2) {
