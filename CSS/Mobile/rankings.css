@@ -1,0 +1,19 @@
+@media only screen and (orientation:portrait) {
+    .table-wrap {
+        overflow-x: scroll !important;
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    .table-wrap::-webkit-scrollbar {
+        width: 0px !important;
+    }
+
+    td {
+        min-width: 11vh;
+    }
+
+    table.student tr.content:hover {
+        transform: scaleX(1) scaleY(1);
+    }
+}

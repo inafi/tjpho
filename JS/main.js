@@ -68,7 +68,6 @@ function initialize() {
             var vc = $(window).height() * 0.01
             $(":root")[0].style.setProperty("--vc", vc + "px");
             prevwidth = $(window).width()
-            console.log(vc)
         }
 
         if ($(window).height() != prevheight) {
